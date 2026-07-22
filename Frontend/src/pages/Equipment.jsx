@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Right from "../layout/Right";
 export default function Equipment() {
   const [equipment, setEquipment] = useState([
     {
@@ -66,8 +66,35 @@ export default function Equipment() {
 
   return (
     <div>
+ 
+    <div className="flex justify-between items-center gap-2 mb-10">
+     <Right
+               title="Employees"
+               value="100"
+               icon="👨‍💼"
+             />
+     
+             <Right
+               title="Equipment"
+               value="250"
+               icon="🖥️"
+             />
+     
+             <Right
+               title="Assignments"
+               value="75"
+               icon="📋"
+             />
+     
+             <Right
+               title="Returns"
+               value="30"
+               icon="↩️"
+             />
+     <div/>
+  </div>
       {/* HEADER */}
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex justify-between items-center mb-4 mt-4">
         <h2 className="text-2xl font-bold">Equipment</h2>
 
         <button
@@ -196,5 +223,6 @@ export default function Equipment() {
         </div>
       )}
     </div>
+    
   );
 }

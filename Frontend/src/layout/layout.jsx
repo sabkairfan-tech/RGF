@@ -2,6 +2,7 @@ import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
 import { Outlet } from "react-router-dom";
 import Card from "./card";
+import Right from "./Right";
 
 export default function Layout() {
   return (
@@ -10,9 +11,11 @@ export default function Layout() {
 
       <div className="flex-1 flex flex-col">
         <Topbar />
-
+     
+ 
         <main className="p-6 overflow-y-auto">
-          <Outlet />
+         
+         <Outlet />
         </main>
       </div>
     </div>
