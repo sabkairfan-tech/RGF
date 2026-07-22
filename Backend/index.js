@@ -1,10 +1,14 @@
 import express from "express";
 import dotenv from "dotenv";
 import routes from "./Routes/routes.js";
+import connectDB from "./db/db.js";
+
 
 dotenv.config();
 
 const app = express();
+
+connectDB();;
 
 app.use(express.json());
 app.use("/uploads", express.static("Uploads"));

@@ -12,7 +12,7 @@ const employeeSchema = new mongoose.Schema(
       index: true,
     },
 
-    name: {
+    fullname: {
       type: String,
       required: [true, "Employee name is required"],
       trim: true,
@@ -50,17 +50,7 @@ const employeeSchema = new mongoose.Schema(
       required: [true, "Iqama Expiry Date is required"],
     },
 
-    passportNumber: {
-      type: String,
-      trim: true,
-      default: "",
-    },
-
-    passportExpiryDate: {
-      type: Date,
-    },
-
-    drivingLicenseNumber: {
+     drivingLicenseNumber: {
       type: String,
       trim: true,
       default: "",
@@ -70,20 +60,7 @@ const employeeSchema = new mongoose.Schema(
       type: Date,
     },
 
-    drivingLicenseCategory: {
-      type: String,
-      trim: true,
-      default: "",
-    },
-
-    name: {
-      type: String,
-      required: [true, "Employee name is required"],
-      trim: true,
-      minlength: 3,
-      maxlength: 100,
-    },
-
+   
     designation: {
       type: String,
       required: [true, "Designation is required"],
@@ -109,7 +86,9 @@ const employeeSchema = new mongoose.Schema(
 
     gender: {
       type: String,
+      required: true,
       enum: ["Male", "Female"],
+      default: "Male",
     },
 
     nationality: {
