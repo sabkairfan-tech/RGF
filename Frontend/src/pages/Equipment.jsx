@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Right from "../layout/Right";
 export default function Equipment() {
+
+
   const [equipment, setEquipment] = useState([
     {
       id: 1,
@@ -65,53 +67,29 @@ export default function Equipment() {
   };
 
   return (
-    <div>
- 
-    <div className="flex justify-between items-center gap-2 mb-10">
-     <Right
-               title="Employees"
-               value="100"
-               icon="👨‍💼"
-             />
-     
-             <Right
-               title="Equipment"
-               value="250"
-               icon="🖥️"
-             />
-     
-             <Right
-               title="Assignments"
-               value="75"
-               icon="📋"
-             />
-     
-             <Right
-               title="Returns"
-               value="30"
-               icon="↩️"
-             />
-     <div/>
-  </div>
-      {/* HEADER */}
-      <div className="flex justify-between items-center mb-4 mt-4">
-        <h2 className="text-2xl font-bold">Equipment</h2>
-
-        <button
+      <div>
+      {/* TOP BAR */}
+    <div className="flex justify-between items-center h-16  mb-4  bg-blue-500">
+      <h1 className="text-white text-xl font-bold m-5">Equipment Management</h1>
+      <button
           onClick={openAddModal}
-          className="bg-blue-600 text-white px-4 py-2 rounded"
+          className="bg-yellow-300 px-4 py-2 rounded-xl m-5"
         >
           + Add Equipment
         </button>
-      </div>
+    </div>
+         
+ 
 
       {/* TABLE */}
       <div className="bg-white shadow ">
         <table className="w-full text-left">
-          <thead className="bg-gray-400 ">
+          <thead className="bg-gray-300">
             <tr>
               <th className="p-3">Serial No</th>
-              <th>Name</th>
+              <th>Equipment Name</th>
+              <th>Category</th>
+              <th>Category</th>
               <th>Category</th>
               <th>Status</th>
               <th>Actions</th>
@@ -123,6 +101,8 @@ export default function Equipment() {
               <tr key={item.id} className="border-b">
                 <td className="p-3">{item.serialNo}</td>
                 <td>{item.name}</td>
+                <td>{item.category}</td>
+                <td>{item.category}</td>
                 <td>{item.category}</td>
                 <td>
                   <span
